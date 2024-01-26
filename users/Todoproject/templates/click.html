@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>username</th>
+                    <th>email</th>
+                    <th>street</th>
+                    <th>suite</th>
+                    <th>city</th>
+                    <th>zipcode</th>
+                    <th>lat</th>
+                    <th>lng</th>
+                    <th>phone</th>
+                    <th>website</th>
+                    <th>name</th>
+                    <th>catchPhrase</th>
+                    <th>bs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {{data.id}}
+                    </td>
+                    <td>
+                        {{data.name}}
+                    </td>
+                    <td>
+                        {{data.username}}
+                    </td>
+                    <td>
+                        {{data.email}}
+                    </td>
+                    <td>
+                        {{data.address.street}}
+                    </td>
+                    <td>
+                        {{data.address.suite}}
+                    </td>
+                    <td>
+                        {{data.address.city}}
+                    </td>
+                    <td>
+                        {{data.address.zipcode}}
+                    </td>
+                    <td>
+                        {{data.geo.lat}}
+                    </td>
+                    <td>
+                        {{data.geo.lng}}
+                    </td>
+                    <td>
+                        {{data.geo.phone}}
+                    </td>
+                    <td>
+                        {{data.geo.website}}
+                    </td>
+                    <td>
+                        {{data.company.name}}
+                    </td>
+                    <td>
+                        {{data.company.catchPhrase}}
+                    </td>
+                    <td>
+                        {{data.company.bs}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 
+{% endblock %}

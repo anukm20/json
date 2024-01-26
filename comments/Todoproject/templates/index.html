@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>postId</th>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>more details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>
+                        {{i.postId}}
+                    </td>
+                    <td>
+                        {{i.id}}
+                    </td>
+                    <td>
+                        {{i.name}}
+                    </td>
+                    <td>
+                        {{i.email}}
+                    </td>
+                    <td>
+                        <a href="{% url 'click' i.id %}">click here</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

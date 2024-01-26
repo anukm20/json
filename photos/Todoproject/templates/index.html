@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>albumId</th>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>more details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>
+                        {{i.albumId}}
+                    </td>
+                    <td>
+                        {{i.id}}
+                    </td>
+                    <td>
+                        {{i.title}}
+                    </td>
+                    <td>
+                        <a href="{% url 'click' i.id %}">click here</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
